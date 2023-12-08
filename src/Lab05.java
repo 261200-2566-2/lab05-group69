@@ -6,34 +6,43 @@ public class Lab05 {
         // Create a Mage character
         MageCharacter mage = new MageCharacter("Merlin", 8);
 
-        // Display information about the characters
-        warrior.displayCharacterInfo();
-        mage.displayCharacterInfo();
-
-        // Perform actions specific to each character class
-        warrior.useSlashAttack();
-        mage.castSpell();
-
-        // Level up the characters
-        warrior.levelUp();
-        mage.levelUp();
-
-        // Display updated information after leveling up
-        warrior.displayCharacterInfo();
-        mage.displayCharacterInfo();
-
         // Create Gauntlet and Ring accessories
         Gauntlet ironGauntlet = new IronGauntlet("Steel");
         MagicRing magicRing = new MagicRing("Fire");
 
-        // Display information about the accessories
+        // Display information about the characters and accessories
+        warrior.displayCharacterInfo();
+        mage.displayCharacterInfo();
         ironGauntlet.displayAccessoryInfo();
         magicRing.displayAccessoryInfo();
 
-        // Perform actions specific to each accessory class
-        ironGauntlet.enhanceAttack();
-        ironGauntlet.provideDefense();
-        magicRing.enhanceMagic();
-        magicRing.increaseManaRegeneration();
+        // Simulate a battle scenario
+        simulateBattle(warrior, mage, ironGauntlet, magicRing);
+
+        // Display final information after the battle
+        warrior.displayCharacterInfo();
+        mage.displayCharacterInfo();
+        ironGauntlet.displayAccessoryInfo();
+        magicRing.displayAccessoryInfo();
     }
-}
+
+    private static void simulateBattle(Warrior warrior, Mage mage, Gauntlet gauntlet, Ring ring) {
+        // Warrior attacks Mage
+        warrior.useSlashAttack();
+        mage.takeDamage(20);
+
+        // Mage counterattacks
+        mage.castSpell();
+        warrior.takeDamage(15);
+
+        // Warrior uses a special ability
+        warrior.useWarriorAbility();
+
+        // Mage uses a special ability
+        mage.useMageAbility();
+
+        // Accessories apply their effects
+        gauntlet.applyEffect(warrior);
+        ring.applyEffect(mage);
+    }
+}//
