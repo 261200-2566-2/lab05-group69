@@ -1,9 +1,17 @@
 class MageCharacter implements Mage {
-    public void displayCharacterInfo() {
-        // Implementation for displaying mage character info
+    private String name;
+    private int level;
+
+    public MageCharacter(String name, int level) {
+        this.name = name;
+        this.level = level;
     }
 
-    public void castFireball() {
-        // Implementation for mage's fireball casting
+    public void displayCharacterInfo() {
+        System.out.println("Mage Character: " + name + ", Level: " + level);
+    }
+
+    public void castSpell() {
+        System.out.println(name + " casts a magical spell!");
     }
 }
