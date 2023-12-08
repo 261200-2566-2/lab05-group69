@@ -1,9 +1,15 @@
 class IronGauntlet implements Gauntlet {
-    public void displayAccessoryInfo() {
-        // Implementation for displaying iron gauntlet info
+    private String type;
+
+    public IronGauntlet(String type) {
+        this.type = type;
     }
 
-    public void provideStrengthBuff() {
-        // Implementation for providing strength buff
+    public void displayAccessoryInfo() {
+        System.out.println("Gauntlet Type: " + type);
+    }
+
+    public void enhanceAttack() {
+        System.out.println("The gauntlet enhances the wearer's attack power!");
     }
 }

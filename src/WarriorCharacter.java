@@ -1,9 +1,17 @@
 class WarriorCharacter implements Warrior {
+    private String name;
+    private int level;
+
+    public WarriorCharacter(String name, int level) {
+        this.name = name;
+        this.level = level;
+    }
+
     public void displayCharacterInfo() {
-        // Implementation for displaying warrior character info
+        System.out.println("Warrior Character: " + name + ", Level: " + level);
     }
 
     public void useSlashAttack() {
-        // Implementation for warrior's slash attack
+        System.out.println(name + " performs a powerful slash attack!");
     }
 }
