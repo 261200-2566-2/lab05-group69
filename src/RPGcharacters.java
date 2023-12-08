@@ -2,23 +2,27 @@
 interface RPGCharacter {
     void displayCharacterInfo();
     void levelUp();
+    void gainExperience(int experiencePoints);
+    void takeDamage(int damage);
+    boolean isAlive();
 }
 
 // Warrior interface represents characters with a warrior job
 interface Warrior extends RPGCharacter {
     void useSlashAttack();
-    void useShieldBlock();
+    void useWarriorAbility();
 }
 
 // Mage interface represents characters with a mage job
 interface Mage extends RPGCharacter {
     void castSpell();
-    void meditate();
+    void useMageAbility();
 }
 
 // RPGAccessory interface represents the common features of all accessories
 interface RPGAccessory {
     void displayAccessoryInfo();
+    void applyEffect(RPGCharacter character);
 }
 
 // Gauntlet interface represents gauntlet-type accessories

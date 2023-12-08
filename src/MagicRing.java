@@ -1,14 +1,12 @@
 class MagicRing implements Ring {
     private String element;
-    private int enchantmentLevel;
 
     public MagicRing(String element) {
         this.element = element;
-        this.enchantmentLevel = 1; // Starting enchantment level
     }
 
     public void displayAccessoryInfo() {
-        System.out.println("Magic Ring Element: " + element + ", Enchantment Level: " + enchantmentLevel);
+        System.out.println("Magic Ring Element: " + element);
     }
 
     public void enhanceMagic() {
@@ -17,5 +15,9 @@ class MagicRing implements Ring {
 
     public void increaseManaRegeneration() {
         System.out.println("The magic ring increases mana regeneration!");
+    }
+
+    public void applyEffect(RPGCharacter character) {
+        System.out.println("Magic ring's special effect applied: Elemental Infusion!");
     }
 }

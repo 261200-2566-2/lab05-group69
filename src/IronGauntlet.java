@@ -1,14 +1,12 @@
 class IronGauntlet implements Gauntlet {
     private String type;
-    private int durability;
 
     public IronGauntlet(String type) {
         this.type = type;
-        this.durability = 100; // Starting durability
     }
 
     public void displayAccessoryInfo() {
-        System.out.println("Gauntlet Type: " + type + ", Durability: " + durability);
+        System.out.println("Gauntlet Type: " + type);
     }
 
     public void enhanceAttack() {
@@ -17,5 +15,10 @@ class IronGauntlet implements Gauntlet {
 
     public void provideDefense() {
         System.out.println("The gauntlet provides additional defense!");
+    }
+
+    public void applyEffect(RPGCharacter character) {
+        System.out.println("Iron gauntlet's special effect applied: Defensive Stance!");
+        // For example, increase the character's defense for a few turns
     }
 }
