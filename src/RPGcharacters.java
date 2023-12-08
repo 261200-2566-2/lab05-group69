@@ -35,4 +35,4 @@ interface Gauntlet extends RPGAccessory {
 interface Ring extends RPGAccessory {
     void enhanceMagic();
     void increaseManaRegeneration();
-}//
+}

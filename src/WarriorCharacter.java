@@ -41,4 +41,4 @@ class WarriorCharacter implements Warrior {
     public void useWarriorAbility() {
         System.out.println(name + " uses a special warrior ability: Crushing Blow!");
     }
-}//
+}
