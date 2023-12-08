@@ -21,4 +21,4 @@ class IronGauntlet implements Gauntlet {
         System.out.println("Iron gauntlet's special effect applied: Defensive Stance!");
         // For example, increase the character's defense for a few turns
     }
-}
+}//

@@ -19,5 +19,6 @@ class MagicRing implements Ring {
 
     public void applyEffect(RPGCharacter character) {
         System.out.println("Magic ring's special effect applied: Elemental Infusion!");
+        // For example, temporarily boost the character's magical abilities
     }
-}
+}//

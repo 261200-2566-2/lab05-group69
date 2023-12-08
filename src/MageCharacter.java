@@ -43,4 +43,4 @@ class MageCharacter implements Mage {
     public void useMageAbility() {
         System.out.println(name + " uses a special mage ability: Arcane Surge!");
     }
-}
+}//
