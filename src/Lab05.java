@@ -45,4 +45,4 @@ public class Lab05 {
         gauntlet.applyEffect(warrior);
         ring.applyEffect(mage);
     }
-}//
+}
