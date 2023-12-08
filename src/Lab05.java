@@ -14,6 +14,14 @@ public class Lab05 {
         warrior.useSlashAttack();
         mage.castSpell();
 
+        // Level up the characters
+        warrior.levelUp();
+        mage.levelUp();
+
+        // Display updated information after leveling up
+        warrior.displayCharacterInfo();
+        mage.displayCharacterInfo();
+
         // Create Gauntlet and Ring accessories
         Gauntlet ironGauntlet = new IronGauntlet("Steel");
         MagicRing magicRing = new MagicRing("Fire");
@@ -24,6 +32,8 @@ public class Lab05 {
 
         // Perform actions specific to each accessory class
         ironGauntlet.enhanceAttack();
+        ironGauntlet.provideDefense();
         magicRing.enhanceMagic();
+        magicRing.increaseManaRegeneration();
     }
 }
